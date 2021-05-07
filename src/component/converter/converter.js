@@ -74,7 +74,7 @@ class Converter extends React.Component {
             onChange={(event) => this.selectHandler(event)}
             value={this.state.fromCurrency}
           >
-            {this.state.currencies &&
+            {this.state.currencies.length>0 &&
               this.state.currencies.map((cur) => (
                 <option key={cur}>{cur}</option>
               ))}
@@ -85,7 +85,7 @@ class Converter extends React.Component {
             value={this.state.toCurrency}
           >
             {console.log(this.state.currencies, "ankita1321341")}
-            {this.state.currencies &&
+            {this.state.currencies.length>0 &&
               this.state.currencies.map((cur) => (
                 <option key={cur}>{cur}</option>
               ))}
